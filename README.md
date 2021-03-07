@@ -1,4 +1,10 @@
-# Emision-CO2
+# PORTFOLIO DATA SCIENCE
+
+Este es una muestra de mis habilidades como data science que he ido adquiriendo con el tiempo y que espero poder desarrollar pronto en un entorno laboral y profesional.
+
+En el se encontrarán los siguientes proyectos:
+
+## Función para predecir la emisión de CO2
 
 Este es un ejemplo de aplicación de técnicas de machine learning para predecir la emisión de CO2 de diferentes vehiculos.
 
