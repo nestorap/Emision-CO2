@@ -18,13 +18,14 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import confusion_matrix
 from sklearn.neighbors import NearestNeighbors
 #%%
-consumo = 'FUELCONSUMPTION_HWY'
-co2 = 'CO2EMISSIONS'
+
 #%%
 
-df = pd.read_csv('/home/nestor/entornos/neoland/2 Practica/9 CLUSTER/coches.csv')
+df = pd.read_csv('coches.csv')
 
-
+# Renombro estas 2 variables que voy a utlizar para que sea mas facil recordar sus nombres
+consumo = 'FUELCONSUMPTION_HWY'
+co2 = 'CO2EMISSIONS'
 
 #%%
 
@@ -126,7 +127,7 @@ def funcion_supreme(patron):
     
     #Abro archivo
     
-    df = pd.read_csv('/home/nestor/entornos/neoland/2 Practica/9 CLUSTER/coches.csv')
+    df = pd.read_csv('coches.csv')
     
     #### HAGO DBSCAN ####
     
