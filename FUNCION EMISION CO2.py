@@ -45,7 +45,8 @@ db = DBSCAN(eps = epsilon,
 labels = db.labels_
 
 df['cluster'] = labels
-# Ahora junto las clases que me ha separado de más
+
+# El DBScan me ha dado clases de más, por lo que, junto a una gráfica, las clases 2,3,4 y 5 las unifico en la clase 1. A esta decisión se llega también por análisis previos
 
 df.replace({2:1, 3:1, 4:1, 5:1}, inplace = True)
 
@@ -111,7 +112,7 @@ madmax = MinMaxScaler()
 madmax.fit(x)
 x = madmax.transform(x)
 
-# hago el random
+# hago el random forest
 
 skf = StratifiedKFold(n_splits = 5)
 
@@ -123,13 +124,15 @@ for train_indice, test_indice in skf.split(x,y):
     clf.fit(x_train, y_train)
     
 #%%
+####### FUNCION ##########
+
 def funcion_supreme(patron):
     
     #Abro archivo
     
     df = pd.read_csv('coches.csv')
     
-    #### HAGO DBSCAN ####
+    # Hago DBSCAN
     
     x = df.loc[:,['FUELCONSUMPTION_HWY', 'CO2EMISSIONS']]
     y = df.loc[:,'CO2EMISSIONS']
@@ -145,6 +148,7 @@ def funcion_supreme(patron):
     labels = db.labels_
     
     df['cluster'] = labels
+            
     # Ahora junto las clases que me ha separado de más
     
     df.replace({2:1, 3:1, 4:1, 5:1}, inplace = True)
@@ -154,6 +158,7 @@ def funcion_supreme(patron):
     
     
     # Data frame para clasificacion
+
     df2 = df.drop([consumo, co2, 'MODELYEAR', 'MODEL'], axis = 1)
 
     # convierto a numeros las cateogricas
@@ -171,7 +176,7 @@ def funcion_supreme(patron):
     madmax.fit(x)
     x = madmax.transform(x)
     
-    #### CLASIFICADOR ####
+    # Clasificador
     
     skf = StratifiedKFold(n_splits = 5)
     
@@ -187,7 +192,7 @@ def funcion_supreme(patron):
     
     if clasif == np.array([0]):
     
-        #### REGRESION LINEL CLUSTER 0 ####
+        # Regresion lineal para el cluster 0
         
         clust0 = df.loc[df['cluster'] == 0,:]
         
@@ -205,7 +210,7 @@ def funcion_supreme(patron):
     
     else:
         
-        #### REGRESION LINEAL CLUSTER 1 ####
+        # Regresión para el cluster 1
         
         clust1 = df.loc[df['cluster']==1,:]
 
@@ -227,7 +232,7 @@ def funcion_supreme(patron):
 
 #%%
 
-#### Prueba #####
+#### PRUEBA #####
 
 
 print(funcion_supreme(np.array([[18. ,  6. ,  1.6,  1. ,  1. ,  2. , 11.1,  8.2,  9.8, 29. ]])))
