@@ -20,4 +20,6 @@ La idea de implementar una función es que, al ver que los datos siguen 2 patron
 
 ### Resultados
 
+Se observó que hay dos grupos bien diferenciados, por lo que se realiza un análisis DBscan que nos separa la muestra en 2 grupos y para cada grupo se calcula una regresión lineal.
+
 Al ser una base de datos para aprender y entender los conocimientos, los resultados son bastante buenos, no obstante, la intención con este repositorio es mostrar mis habilidades de análisis y manejo de python.
