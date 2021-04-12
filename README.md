@@ -2,33 +2,13 @@
 
 Este es una muestra de mis habilidades como data science que he ido adquiriendo con el tiempo y que espero poder desarrollar pronto en un entorno laboral y profesional.
 
-En el se encontrarán los siguientes proyectos:
+En el se encontrarán las siguientes carpetas:
 
-## Ejemplo nube de palabras
+### Python
+Aquí están los proyectos realizados en este lenguaje de programación.
+Dentro de este directorio está el proyecto sobre crossfit. Esta base de datos es sobre la que iré subiendo distintos tipos de análisis y profundizando más en los resultados. Es lo más similar a un proyecto completo ya que comprende todas las fases desde la recolección hasta el empleo de los algoritmos.
+El resto de documentos son muestra de las habilidades pero con datos independientes.
 
-Este notebook es un primer paso en NLP. Aquí realizo una nube de palabras de un libro de Sherlock Holmes.
+### R
+En esta carpeta hay proyectos algo más teóricos pero que también muestran mis habilidades en este lenguaje. Aún tengo que subir los proyectos que tengo y aún no está creada.
 
-Para ello utilizo la función stopwords, donde de elimina los artículos, preposiciones y palabras que no aportan valor o no tienen un significado acerca de la temática del libro.
-
-Para finalizar, la nube de palabras la adapto a una imagen del personaje para hacer el resultado más visual.
-
-## Función emisión de CO2
-
-Este es un ejemplo de aplicación de técnicas de machine learning para predecir la emisión de CO2 de diferentes vehiculos.
-
-Además de las técnicas de machine learning, realizo una función que automatice todo el proyecto.
-
-En el código se observa como realizo el proceso paso a paso para organizarme hasta adquirir un mejor manejo.
-
-### Variables
-
-Para esta función solo escojo dos variables.
-
-La idea de implementar una función es que, al ver que los datos siguen 2 patrones diferentes, se reliza un DBSCAN para separar esos 2 grupos y, para cada uno se realiza una regresion lineal. Es una especie de regresión multinivel.
-
-
-### Resultados
-
-Se observó que hay dos grupos bien diferenciados, por lo que se realiza un análisis DBscan que nos separa la muestra en 2 grupos y para cada grupo se calcula una regresión lineal.
-
-Al ser una base de datos para aprender y entender los conocimientos, los resultados son bastante buenos, no obstante, la intención con este repositorio es mostrar mis habilidades de análisis y manejo de python.
